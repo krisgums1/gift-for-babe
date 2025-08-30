@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Flower 🌸</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe4f0, #ffb6c1);
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .flower {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .petal {
+      position: absolute;
+      width: 80px;
+      height: 120px;
+      background: radial-gradient(circle at center, #ff69b4 0%, #ff1493 70%);
+      border-radius: 50%;
+      top: 15px;
+      left: 35px;
+      transform-origin: 50% 100%;
+      animation: pulse 2s infinite alternate;
+    }
+
+    .petal:nth-child(1) {
+      transform: rotate(0deg);
+    }
+    .petal:nth-child(2) {
+      transform: rotate(72deg);
+    }
+    .petal:nth-child(3) {
+      transform: rotate(144deg);
+    }
+    .petal:nth-child(4) {
+      transform: rotate(216deg);
+    }
+    .petal:nth-child(5) {
+      transform: rotate(288deg);
+    }
+
+    .center {
+      position: absolute;
+      top: 55px;
+      left: 55px;
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle at center, #ffeb3b, #fbc02d);
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(255, 223, 0, 0.6);
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from {
+        transform: scale(1) rotate(var(--angle));
+      }
+      to {
+        transform: scale(1.1) rotate(var(--angle));
+      }
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 5px rgba(255, 223, 0, 0.5);
+      }
+      to {
+        box-shadow: 0 0 20px rgba(255, 223, 0, 1);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flower">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="center"></div>
+  </div>
+</body>
+</html>
