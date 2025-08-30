@@ -30,25 +30,19 @@
       border-radius: 50%;
       top: 40px;
       left: 60px;
-      transform-origin: 50% 100%; /* pivot at bottom of petal */
-      animation: pulse 2s infinite alternate;
+      transform-origin: 50% 100%;
+      animation: petalPulse 2s infinite alternate;
     }
 
-    /* Rotate & spread petals */
-    .petal:nth-child(1) {
-      transform: rotate(0deg) translateY(-60px);
-    }
-    .petal:nth-child(2) {
-      transform: rotate(72deg) translateY(-60px);
-    }
-    .petal:nth-child(3) {
-      transform: rotate(144deg) translateY(-60px);
-    }
-    .petal:nth-child(4) {
-      transform: rotate(216deg) translateY(-60px);
-    }
-    .petal:nth-child(5) {
-      transform: rotate(288deg) translateY(-60px);
+    /* Position petals evenly around the center */
+    .petal:nth-child(1) { --angle: 0deg; }
+    .petal:nth-child(2) { --angle: 72deg; }
+    .petal:nth-child(3) { --angle: 144deg; }
+    .petal:nth-child(4) { --angle: 216deg; }
+    .petal:nth-child(5) { --angle: 288deg; }
+
+    .petal {
+      transform: rotate(var(--angle)) translateY(-60px);
     }
 
     .center {
@@ -63,12 +57,13 @@
       animation: glow 1.5s infinite alternate;
     }
 
-    @keyframes pulse {
+    /* Animations */
+    @keyframes petalPulse {
       from {
-        transform: scale(1);
+        transform: rotate(var(--angle)) translateY(-60px) scale(1);
       }
       to {
-        transform: scale(1.1);
+        transform: rotate(var(--angle)) translateY(-60px) scale(1.1);
       }
     }
 
@@ -82,12 +77,8 @@
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-15px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
     }
   </style>
 </head>
