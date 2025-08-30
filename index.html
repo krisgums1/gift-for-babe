@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>For My Babe 💖</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <!-- defer ensures the script runs after HTML is parsed -->
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <h1>Hi Babe 🥰</h1>
-    <p>Welcome to this website only made for yah 💕</p>
+    <p class="subtitle">Welcome to this website only made for yah 💕</p>
 
-    <div id="loginBox">
-      <input type="password" id="password" placeholder="Enter password">
-      <button onclick="checkPassword()">Enter</button>
-      <p id="errorMsg" class="error">Wrong password babe 😢</p>
+    <div id="loginBox" class="card">
+      <label for="password" class="sr-only">Enter password</label>
+      <input id="password" type="password" placeholder="Enter password" autocomplete="off" />
+      <button id="enterBtn" type="button">Enter</button>
+      <p id="errorMsg" class="error" aria-live="polite">Wrong password babe 😢</p>
     </div>
-  </div>
+  </main>
 </body>
 </html>
