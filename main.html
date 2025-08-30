@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For My Babe 💖</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For My Babe — Surprise 💖</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>💖 Yay! You’re in babe 💖</h1>
-    <p>This is our little secret space on the internet just for you 🥺💘</p>
-    <p>Every moment with you feels like magic ✨</p>
-    <img src="https://placekitten.com/400/250" alt="Cute surprise">
-  </div>
+  <main class="container">
+    <div class="card">
+      <h1>💖 Yay! You’re in babe 💖</h1>
+      <p>This is our little secret space on the internet just for you 🥺💘</p>
+      <p>Every moment with you still feels new and also like home.</p>
+
+      <div class="gallery">
+        <img src="https://placekitten.com/400/300" alt="Cute pic 1">
+        <img src="https://picsum.photos/400/300?random=2" alt="Cute pic 2">
+        <img src="https://placebear.com/400/300" alt="Cute pic 3">
+      </div>
+
+      <p class="footer">Made with ❤️ by me — <span id="today"></span></p>
+    </div>
+  </main>
+
+  <script>
+    // small helper just to show today's date on main.html
+    const d = new Date();
+    const el = document.getElementById('today');
+    if (el) el.textContent = d.toLocaleDateString();
+  </script>
 </body>
 </html>
