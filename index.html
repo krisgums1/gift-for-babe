@@ -1,49 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="index.css"><title>For My Babe ❤️</title>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Babe 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Happy Monthsary, Babe! <span class="heart">❤</span></h1>
-    <p>A little corner of the internet, made just for you.</p>
-  </header>
-
   <div class="container">
-    <div class="card">
-      <h2>💌 A Note for You</h2>
-      <p>
-        Every day with you still feels new, yet somehow like home. Thank you for loving me in your own ways and for being the person I can be my truest self with. I'm so grateful we found each other. Here's to many more memories, laughter, and love — always us. 🥰
-      </p>
-    </div>
+    <h1>Hi Babe 🥰</h1>
+    <p>Welcome to this website only made for yah 💕</p>
 
-    <div class="card">
-      <h2>📸 Our Gallery</h2>
-      <div class="gallery">
-        <img src="https://placekitten.com/400/300" alt="Sample 1">
-        <img src="https://placebear.com/400/300" alt="Sample 2">
-        <img src="https://picsum.photos/400/300?random=1" alt="Sample 3">
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>🎶 Our Song</h2>
-      <p>Play this when you think of me 💕</p>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7qEHsqek33rTcFNT9PFqLf?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <div id="loginBox">
+      <input type="password" id="password" placeholder="Enter password">
+      <button onclick="checkPassword()">Enter</button>
+      <p id="errorMsg" class="error">Wrong password babe 😢</p>
     </div>
   </div>
-
-  <footer>
-    Made with ❤️ by me — <span id="date"></span>
-  </footer>
-
-  <script>
-    document.getElementById('date').textContent = new Date().toLocaleDateString();
-  </script>
 </body>
 </html>
