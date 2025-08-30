@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Babe ❤️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #e60073;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: .5rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .heart {
+      color: #e60073;
+      animation: heartbeat 1.5s infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Happy Monthsary, Babe! <span class="heart">❤</span></h1>
+    <p>A little corner of the internet, made just for you.</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>💌 A Note for You</h2>
+      <p>
+        Every day with you still feels new, yet somehow like home. Thank you for loving me in your own ways and for being the person I can be my truest self with. I'm so grateful we found each other. Here's to many more memories, laughter, and love — always us. 🥰
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📸 Our Gallery</h2>
+      <div class="gallery">
+        <img src="https://placekitten.com/400/300" alt="Sample 1">
+        <img src="https://placebear.com/400/300" alt="Sample 2">
+        <img src="https://picsum.photos/400/300?random=1" alt="Sample 3">
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🎶 Our Song</h2>
+      <p>Play this when you think of me 💕</p>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7qEHsqek33rTcFNT9PFqLf?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    Made with ❤️ by me — <span id="date"></span>
+  </footer>
+
+  <script>
+    document.getElementById('date').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
