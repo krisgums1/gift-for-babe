@@ -17,8 +17,8 @@
 
     .flower {
       position: relative;
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       animation: float 3s ease-in-out infinite;
     }
 
@@ -28,32 +28,33 @@
       height: 120px;
       background: radial-gradient(circle at center, #ff69b4 0%, #ff1493 70%);
       border-radius: 50%;
-      top: 15px;
-      left: 35px;
+      top: 40px;
+      left: 60px;
       transform-origin: 50% 100%;
       animation: pulse 2s infinite alternate;
     }
 
+    /* Rotate petals into position */
     .petal:nth-child(1) {
-      transform: rotate(0deg);
+      transform: rotate(0deg) translateY(-50px);
     }
     .petal:nth-child(2) {
-      transform: rotate(72deg);
+      transform: rotate(72deg) translateY(-50px);
     }
     .petal:nth-child(3) {
-      transform: rotate(144deg);
+      transform: rotate(144deg) translateY(-50px);
     }
     .petal:nth-child(4) {
-      transform: rotate(216deg);
+      transform: rotate(216deg) translateY(-50px);
     }
     .petal:nth-child(5) {
-      transform: rotate(288deg);
+      transform: rotate(288deg) translateY(-50px);
     }
 
     .center {
       position: absolute;
-      top: 55px;
-      left: 55px;
+      top: 80px;
+      left: 80px;
       width: 40px;
       height: 40px;
       background: radial-gradient(circle at center, #ffeb3b, #fbc02d);
@@ -64,10 +65,10 @@
 
     @keyframes pulse {
       from {
-        transform: scale(1) rotate(var(--angle));
+        transform: scale(1);
       }
       to {
-        transform: scale(1.1) rotate(var(--angle));
+        transform: scale(1.1);
       }
     }
 
