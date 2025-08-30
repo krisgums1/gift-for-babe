@@ -30,25 +30,25 @@
       border-radius: 50%;
       top: 40px;
       left: 60px;
-      transform-origin: 50% 150px; /* Spread around center */
+      transform-origin: 50% 100%; /* pivot at bottom of petal */
       animation: pulse 2s infinite alternate;
     }
 
-    /* Rotate petals into position */
+    /* Rotate & spread petals */
     .petal:nth-child(1) {
-      transform: rotate(0deg);
+      transform: rotate(0deg) translateY(-60px);
     }
     .petal:nth-child(2) {
-      transform: rotate(72deg);
+      transform: rotate(72deg) translateY(-60px);
     }
     .petal:nth-child(3) {
-      transform: rotate(144deg);
+      transform: rotate(144deg) translateY(-60px);
     }
     .petal:nth-child(4) {
-      transform: rotate(216deg);
+      transform: rotate(216deg) translateY(-60px);
     }
     .petal:nth-child(5) {
-      transform: rotate(288deg);
+      transform: rotate(288deg) translateY(-60px);
     }
 
     .center {
@@ -68,4 +68,37 @@
         transform: scale(1);
       }
       to {
-        transform:
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 5px rgba(255, 223, 0, 0.5);
+      }
+      to {
+        box-shadow: 0 0 20px rgba(255, 223, 0, 1);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flower">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="center"></div>
+  </div>
+</body>
+</html>
